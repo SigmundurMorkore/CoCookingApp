@@ -7,7 +7,7 @@
 
 <div>
 	<header>
-		<h1>CoCooking</h1>
+		<h1>CoCooking App</h1>
 	</header>
 
 	<nav>
@@ -52,6 +52,10 @@
 		font-weight: bold;
 		font-size: 36px;
 		line-height: 44px;
+	}
+	h1 {
+		margin-top: 10px;
+		margin-left: 1rem;
 	}
 
 	nav {
