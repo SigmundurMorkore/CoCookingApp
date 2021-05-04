@@ -1,6 +1,7 @@
 <svelte:head>
 	<style>
 		@import 'https://meyerweb.com/eric/tools/css/reset/reset.css';
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 	</style>
 </svelte:head>
 
@@ -10,9 +11,13 @@
 	</header>
 
 	<nav>
-		<h2>Recipies</h2>
+		<h2>Recipies:</h2>
 		<ul>
-			<li>MEZZE MANICHE ALLA GRICIA</li>
+			<li><a href="mezze">Mezze Maniche Alla Gricia</a></li>
+			<li><a href="beef-stew">Beef Stew</a></li>
+			<li><a href="rosehip">Rosehip Marmalde</a></li>
+			<li><a href="persian-kuku">Persian Kuku</a></li>
+			<li><a href="pakistani-vegetable">Pagistani Vegetable Curry</a></li>
 		</ul>
 	</nav>
 
@@ -22,6 +27,15 @@
 </div>
 
 <style>
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	li {
+		margin-left: 20px;
+		padding-top: 10px;
+	}
+
 	div {
 		display: grid;
 		grid-template-areas:
