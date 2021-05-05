@@ -1,43 +1,60 @@
 <script>
+	// Set the default value for roomName to be "CoCooking"
 	export let roomName = 'CoCooking';
+
 	import { onMount } from 'svelte';
+
+	// Set the initial variables
 	let jitsiReady = false;
 	let jitsiHasLoaded = false;
 	let mounted = false;
 
 	let api;
 
+	// When component mounts:
 	onMount(() => {
-		// The payment-form is ready.
 		mounted = true;
 	});
 
+	// When Jitsi has loaded:
 	function jitsiLoaded() {
 		// The external Jitsi javascript is ready.
 		jitsiReady = true;
 	}
 
+	// Start Jitsi. Checks that the component is mounted and Jitsi is ready,
+	// and if they are, it calls the loadJitsiElements() function.
 	function startJitsi() {
-		loadJitsiElements();
+		if (mounted && jitsiReady) {
+			loadJitsiElements();
+		}
 	}
 
+	// Unload Jitsi:
 	function unloadJitsi() {
 		api.dispose();
 		jitsiHasLoaded = false;
 	}
 
 	function loadJitsiElements() {
+		// Set the domain name of the Jitsi instance
 		const domain = 'meet.jit.si';
+
+		// Set the options
 		const options = {
 			roomName,
 			width: 700,
 			height: 400,
 			parentNode: document.querySelector('#meet')
 		};
+
+		// Create the Jitsi element, which will attach itself to #meet
 		api = new JitsiMeetExternalAPI(domain, options);
 
+		// Indicate that Jitsi has loaded
 		jitsiHasLoaded = true;
 
+		// Listen for when the user leaves the call, and then unload Jitsi.
 		api.addListener('videoConferenceLeft', unloadJitsi);
 	}
 </script>
@@ -48,7 +65,6 @@
 
 <div>
 	{#if !jitsiHasLoaded}
-		<!-- content here -->
 		<section class="jitsi">
 			<h2>Join others who are cooking this recipie!</h2>
 			<button on:click={() => startJitsi()}>Join video chat</button>
