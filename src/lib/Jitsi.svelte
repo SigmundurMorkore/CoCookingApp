@@ -86,7 +86,7 @@
 		position: sticky;
 		top: 2rem;
 		width: 700px;
-		height: 400px;
+		height: 200px;
 		background: #bfc78a;
 		padding: 2rem;
 		margin: 2rem;
