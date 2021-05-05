@@ -17,7 +17,7 @@
 			<li><a href="beef-stew">Beef Stew</a></li>
 			<li><a href="rosehip">Rosehip Marmalde</a></li>
 			<li><a href="persian-kuku">Persian Kuku</a></li>
-			<li><a href="pakistani-vegetable">Pagistani Vegetable Curry</a></li>
+			<li><a href="pakistani-vegetable">Pakistani Vegetable Curry</a></li>
 		</ul>
 	</nav>
 
