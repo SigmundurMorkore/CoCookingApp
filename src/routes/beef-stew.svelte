@@ -33,7 +33,7 @@
 		</section>
 	</main>
 
-	<Jitsi roomName="CoCooking-persian-kuku" />
+	<Jitsi roomName="CoCooking-beef-stew" />
 </article>
 
 <style>

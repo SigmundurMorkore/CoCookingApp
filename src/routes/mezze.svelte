@@ -59,7 +59,7 @@
 		</section>
 	</main>
 
-	<Jitsi roomName="CoCooking-pakistani-vegetable" />
+	<Jitsi roomName="CoCooking-mezze-maniche-alla-gricia" />
 </article>
 
 <style>
